@@ -19,4 +19,10 @@ class Choice(models.Model):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 # Fim da parte 02
 
+# Parte 05
+def was_published_recently(self):
+    now = timezone.now()
+    return now - datetime.timedelta(days=1) <= self.pub_date <= now
+# Fim da parte 05
+
 # Create your models here.
